@@ -29,14 +29,30 @@ are problematic due to the following reasons:
 * boost-filesystem
 * shapelib ([http://download.osgeo.org/shapelib/](http://download.osgeo.org/shapelib/))
 
+##### For Testing
+* gcc-4.9
+* gdal-bin
+
 
 #### On Ubuntu install: *(tested with 14.04.2 LTS)*
 
+Install instructions:
+
 <code>
 sudo apt-get install libbz2-dev libgdal-dev libexpat1-dev libgeos++-dev libpthread-stubs0-dev zlib1g-dev libosmpbf-dev libprotobuf-dev libboost-dev libboost-filesystem-dev
+
+sudo apt-get install gdal-bin
+
 mkdir -p ~/libs
+
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt-get install gcc-4.9
+
 cd ~/libs
 git clone https://github.com/osmcode/libosmium
+
 curl http://download.osgeo.org/shapelib/shapelib-1.3.0.tar.gz -o shapelib-1.3.0.tar.gz
 tar xzf shapelib-1.3.0.tar.gz
 cd shapelib-1.3.0
