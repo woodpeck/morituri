@@ -1,13 +1,11 @@
 #!/bin/bash
 sudo apt-get -y install software-properties-common
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 sudo apt-get -y update
 sudo apt-get -y upgrade
-sudo apt-get -y install gcc-4.9
-
-sudo apt-get -y install libbz2-dev libgdal-dev libexpat1-dev libgeos++-dev libpthread-stubs0-dev zlib1g-dev libosmpbf-dev libprotobuf-dev libboost-dev libboost-filesystem-dev
-
+sudo apt-get -y install gcc-4.9 
 sudo apt-get -y install gdal-bin
+sudo apt-get -y install libbz2-dev libgdal-dev libexpat1-dev libgeos++-dev libpthread-stubs0-dev zlib1g-dev libosmpbf-dev libprotobuf-dev libboost-dev libboost-filesystem-dev
 
 mkdir -p ~/libs
 cd ~/libs

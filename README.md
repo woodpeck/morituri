@@ -31,34 +31,17 @@ are problematic due to the following reasons:
 
 ##### For Testing
 * gcc-4.9
-* gdal-bin
+* gdal-bin (for ogr2ogr)
 
 
-#### On Ubuntu install: *(tested with 14.04.2 LTS)*
+#### Ubuntu install instructions: *(tested with 14.04.2 LTS)*
 
-Install instructions:
-
-<code>
-sudo apt-get install libbz2-dev libgdal-dev libexpat1-dev libgeos++-dev libpthread-stubs0-dev zlib1g-dev libosmpbf-dev libprotobuf-dev libboost-dev libboost-filesystem-dev
-
-sudo apt-get install gdal-bin
-
-mkdir -p ~/libs
-
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-sudo apt-get update
-sudo apt-get install gcc-4.9
-
-cd ~/libs
-git clone https://github.com/osmcode/libosmium
-
-curl http://download.osgeo.org/shapelib/shapelib-1.3.0.tar.gz -o shapelib-1.3.0.tar.gz
-tar xzf shapelib-1.3.0.tar.gz
-cd shapelib-1.3.0
-make
-sudo make install
-</code>
+CAUTION: Have a look at `install_prerequisits.sh` before executing it.
+Because gcc-4.9 isn't in Ubuntu 14.04 LTS yet this script adds the apt-repository `ppa:ubuntu-toolchain-r/test`.
+Along with this repository you may get asked to update grub.
+ 
+Install prerequisits with the `install_prerequisits.sh`. You may have to make this executable 
+(e.g. with `chmod +x install_prerequisits.sh`).
 
 build with: `make -j2`
 
