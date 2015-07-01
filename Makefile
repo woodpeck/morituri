@@ -31,7 +31,7 @@ TEST_HEADER=${NAVTEQ_HEADER}
 
 
 # includes
-OSMIUM_INCLUDE=-I${HOME}/libs/libosmium-latest/include
+OSMIUM_INCLUDE=-I${HOME}/libs/libosmium/include
 INCLUDES=${OSMIUM_INCLUDE} -Iplugins
 LIBS=-lbz2 -lgdal -lexpat -lgeos -lpthread -lz -losmpbf -lprotobuf-lite -lboost_system -lboost_filesystem
 
