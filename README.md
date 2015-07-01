@@ -97,11 +97,11 @@ to produce a PBF file.
   
    e.g. the following five nodes (with 3 different z level values) would be mapped to the two ways (with 2 different z level values) below: 
   
-       node---node---node---node---node       
-     	 z0     z1     z0     z2     z0
-                       |
-                       V
-         |-----way-----|-----way-----|
+         node---node---node---node---node       
+          z0     z1     z0     z2     z0
+                         |
+                         V
+           |-----way-----|-----way-----|
                z1            z2
            
    To understand the mapping look at the test cases in `test_comm2osm.cpp`.
